@@ -8,10 +8,6 @@
     "keywords" : [
         "daemon"
     ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/niegowski/daemonize.git"
-    },
     "engines": {
         "node": ">= 0.6.0"
     },
