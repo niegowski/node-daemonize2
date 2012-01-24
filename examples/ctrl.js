@@ -32,6 +32,10 @@ switch (process.argv[2]) {
         });
         break;
 
+    case "reload":
+        daemon.sendSignal("SIGUSR1");
+        break;
+
     case "status":
         daemon.status();
         break;
