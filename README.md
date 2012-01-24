@@ -13,6 +13,9 @@ $ npm install daemonize
 Changelog
 ===========
 
+### 0.1.1 - Jan 24 2012
+  - print stacktrace for uncaughtException
+
 ### 0.1.0 - Jan 24 2012
   - First release 
 
