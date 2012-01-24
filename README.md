@@ -13,6 +13,14 @@ $ npm install daemonize
 Changelog
 ===========
 
+### 0.1.2 - Jan 25 2012
+  - fixed stdout, stderr replacement
+  - checking for daemon main module presence
+  - signals change (added custom signals)
+  - better log messages
+  - gracefull terminate in example app
+  - close logfile on process exit
+
 ### 0.1.1 - Jan 24 2012
   - print stacktrace for uncaughtException
 
@@ -56,7 +64,11 @@ Example
                 });
             });
             break;
-    
+
+        case "reload":
+            daemon.sendSignal("SIGUSR1");
+            break;
+                
         case "status":
             daemon.status();
             break;
