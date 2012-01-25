@@ -4,7 +4,6 @@ var daemon = require("daemonize").setup({
     name: "sampleapp",
     user: "www",
     group: "www",
-    logfile: "/var/log/sampleapp.log",
     pidfile: "/var/run/sampleapp.pid"
 });
 
