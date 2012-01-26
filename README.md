@@ -13,6 +13,9 @@ $ npm install daemonize
 Changelog
 ===========
 
+### 0.2.1 - Jan 26 2012
+  - fix for calling callback in stop/kill when process is not running
+
 ### 0.2.0 - Jan 26 2012
   - code refactor
   - stop listening for uncaughtException
