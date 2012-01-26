@@ -13,6 +13,11 @@ $ npm install daemonize
 Changelog
 ===========
 
+### 0.2.0 - Jan 26 2012
+  - code refactor
+  - stop listening for uncaughtException
+  - logfile removed
+
 ### 0.1.2 - Jan 25 2012
   - fixed stdout, stderr replacement
   - checking for daemon main module presence
@@ -37,7 +42,6 @@ Example
         name: "sampleapp",
         user: "www",
         group: "www",
-        logfile: "/var/log/sampleapp.log",
         pidfile: "/var/run/sampleapp.pid"
     });
     
