@@ -1,11 +1,16 @@
 
 var daemon = require("daemonize").setup({
-    main: "sample.js",
+    main: "app.js",
     name: "sampleapp",
+    pidfile: "/var/run/sampleapp.pid",
     user: "www",
-    group: "www",
-    pidfile: "/var/run/sampleapp.pid"
+    group: "www"
 });
+
+if (process.getuid() != 0) {
+    console.log("Expected to run as root");
+    process.exit(1);
+}
 
 switch (process.argv[2]) {
     
@@ -32,6 +37,7 @@ switch (process.argv[2]) {
         break;
 
     case "reload":
+        console.log("Reload.");
         daemon.sendSignal("SIGUSR1");
         break;
 
@@ -40,5 +46,5 @@ switch (process.argv[2]) {
         break;
     
     default:
-        console.log("Usage: [start|stop|kill|restart|status]");
+        console.log("Usage: [start|stop|kill|restart|reload|status]");
 }
