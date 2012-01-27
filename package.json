@@ -1,6 +1,6 @@
 {
     "name": "daemonize",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Module for easy creation of daemons",
     "author": "Kuba Niegowski",
     "contributors": [],
