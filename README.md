@@ -2,14 +2,14 @@ About
 =======
 
 Node module for easy creation of daemons. Just write your daemon as plain 
-node.js application (like /examples/simple/app.js) and wrap it with 
-Daemonize (like /examples/simple/ctrl.js). 
+node.js application (like `/examples/simple/app.js`) and wrap it with 
+Daemonize (like `/examples/simple/ctrl.js`). 
 
 
 Installation
 ==============
 
-$ npm install daemonize
+`$ npm install daemonize`
 
 
 Example
@@ -39,7 +39,7 @@ switch (process.argv[2]) {
 }
 ```
 
-Find more examples in examples folder.
+Find more examples in `examples` folder.
 
 Documentation
 ===============
