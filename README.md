@@ -55,9 +55,7 @@ so `process.on("uncaughtException", ...)` should be used to
 redirect output to some log file.
 
 ## daemonize.setup(options)
-Creates new `Daemon` instance.
-
-Supported `options`:
+Creates new `Daemon` instance. Supported `options`:
 * `main` - main application module file to run as daemon (required)
 * `name` - daemon name (default: basename of main)
 * `pidfile` - pidfile path (default: `/var/run/[name].pid`)
@@ -109,27 +107,24 @@ Emitted when `start()` failed. `error` is instance of `Error`.
 `error.message` contains information what went wrong.
 
 ### daemon.start()
-Asynchronously start daemon. 
-
-Emits `running` in case of daemon already 
+Asynchronously start daemon. Emits `running` in case of daemon already 
 running and `starting` when daemon is not running. Then emits `started`
-when daemon successfully started.
+when daemon successfully started. 
 
-Emits `error` in case of any problem with starting daemon.
+Emits `error` in case of any problem 
+with starting daemon.
 
 ### daemon.stop()
-Asynchronously stop daemon.
+Asynchronously stop daemon. Sends `SIGTERM` to daemon every 2s (or time 
+set in options). 
 
-Sends `SIGTERM` to daemon every 2s (or time set in options). 
-
-Emits `notrunning` when daemon is not running, otherwise emits `stopping`
-and then `stopped` when daemon successfully stopped. 
+Emits `notrunning` when daemon is not running, otherwise 
+emits `stopping` and then `stopped` when daemon successfully stopped. 
 
 ### daemon.kill()
-Asynchronously kill daemon.
-
-Sends `SIGTERM` and then (after 2s) `SIGKILL` to daemon. Repeats sending
-`SIGKILL` every 2s untill daemon stopps (time can be changed in options).
+Asynchronously kill daemon. Sends `SIGTERM` and then (after 2s) `SIGKILL` 
+to daemon. Repeats sending `SIGKILL` every 2s untill daemon stopps (time 
+can be changed in options). 
 
 Emits events same as `stop()`.
 
