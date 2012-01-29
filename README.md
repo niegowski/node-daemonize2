@@ -40,7 +40,7 @@ switch (process.argv[2]) {
 }
 ```
 
-Find more examples in `examples` folder.
+For more examples see `examples` folder.
 
 Documentation
 ===============
