@@ -49,7 +49,7 @@ Daemonize works like standard `require()` but loaded module is
 shifted to work in background as a daemon. Keep in mind that
 `stdin`, `stdout` and `stderr` are redirected to `/dev/null` 
 so any output from daemon won't display in console. You need to 
-use file for logging (ie like /exaples/advanced/app.js).
+use file for logging (ie like `/examples/advanced/app.js`).
 
 Also any uncaught exception won't be displayed in the console,
 so `process.on("uncaughtException", ...)` should be used to
