@@ -69,7 +69,7 @@ Creates new `Daemon` instance. Supported `options`:
 All paths are resolved relative to file that uses "daemonize".
 
 ## Daemon
-Daemon control class. It references daemon to control.
+Daemon control class. It references controlled daemon.
 
 ### Event: "starting"
 `function() { }`
