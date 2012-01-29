@@ -57,6 +57,7 @@ redirect output to some log file.
 
 ## daemonize.setup(options)
 Creates new `Daemon` instance. Supported `options`:
+
 * `main` - main application module file to run as daemon (required)
 * `name` - daemon name (default: basename of main)
 * `pidfile` - pidfile path (default: `/var/run/[name].pid`)
