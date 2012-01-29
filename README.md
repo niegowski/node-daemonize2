@@ -8,8 +8,9 @@ Daemonize (like `/examples/simple/ctrl.js`).
 
 Installation
 ==============
-
-`$ npm install daemonize`
+```
+$ npm install daemonize
+```
 
 
 Example
