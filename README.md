@@ -71,6 +71,9 @@ Creates new `Daemon` instance. Supported `options`:
 
 All paths are resolved relative to file that uses "daemonize".
 
+All other options will be passed to the child process as posix style 
+arguments (`--myarg1=abc`).
+
 ## Daemon
 Daemon control class. It references controlled daemon.
 
