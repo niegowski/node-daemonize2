@@ -1,9 +1,11 @@
 About
 =======
 
-Node module for easy creation of daemons. Just write your daemon as plain 
-node.js application (like `/examples/simple/app.js`) and wrap it with 
-Daemonize (like `/examples/simple/ctrl.js`). 
+Node module for easy creation of daemons.
+
+Just write your daemon as plain node.js application 
+(like `/examples/simple/app.js`) and a simple controller with Daemonize 
+(like `/examples/simple/ctrl.js`). 
 
 
 Installation
@@ -46,10 +48,11 @@ Documentation
 ===============
 
 Daemonize works like standard `require()` but loaded module is 
-shifted to work in background as a daemon. Keep in mind that
-`stdin`, `stdout` and `stderr` are redirected to `/dev/null` 
-so any output from daemon won't display in console. You need to 
-use file for logging (ie like `/examples/advanced/app.js`).
+forked to work in background as a daemon. 
+
+Keep in mind that `stdin`, `stdout` and `stderr` are redirected 
+to `/dev/null` so any output from daemon won't display in console. 
+You need to use file for logging (ie like `/examples/advanced/app.js`).
 
 Also any uncaught exception won't be displayed in the console,
 so `process.on("uncaughtException", ...)` should be used to
@@ -109,12 +112,11 @@ Emitted when `start()` failed. `error` is instance of `Error`.
 `error.message` contains information what went wrong.
 
 ### daemon.start()
-Asynchronously start daemon. Emits `running` in case of daemon already 
-running and `starting` when daemon is not running. Then emits `started`
-when daemon successfully started. 
+Start daemon asynchronously. Emits `running` in case when daemon is 
+already running and `starting` when daemon is not running. Then emits 
+`started` when daemon is successfully started. 
 
-Emits `error` in case of any problem 
-with starting daemon.
+Emits `error` in case of any problem during daemon startup.
 
 ### daemon.stop()
 Asynchronously stop daemon. Sends `SIGTERM` to daemon every 2s (or time 
@@ -124,17 +126,17 @@ Emits `notrunning` when daemon is not running, otherwise
 emits `stopping` and then `stopped` when daemon successfully stopped. 
 
 ### daemon.kill()
-Asynchronously kill daemon. Sends `SIGTERM` and then (after 2s) `SIGKILL` 
-to daemon. Repeats sending `SIGKILL` every 2s untill daemon stopps (time 
-can be changed in options). 
+Kill daemon asynchronously. Sends `SIGTERM` and after 2s `SIGKILL` to the 
+child if needed. Repeats sending `SIGKILL` every 2s untill daemon 
+stops (interval can be changed in options).
 
 Emits events same as `stop()`.
 
 ### daemon.status()
-Synchronously returns pid for running daemon or `0` when daemon is not running.
+Synchronously returns pid for running daemon or 0 when daemon is not running.
 
 ### daemon.sendSignal(signal)
-Synchronously sends `signal` to daemon and returns pid of daemon or `0` when
+Synchronously sends `signal` to daemon and returns pid of daemon or 0 when
 daemon is not running.
 
 
