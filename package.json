@@ -1,10 +1,10 @@
 {
     "name": "daemonize",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Module for easy creation of daemons",
     "author": "Kuba Niegowski",
     "contributors": [],
-    "homepage": "https://github.com/niegowski/daemonize/",
+    "homepage": "https://github.com/niegowski/node-daemonize/",
     "keywords" : [
         "daemon"
     ],
