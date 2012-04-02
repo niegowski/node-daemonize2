@@ -146,6 +146,10 @@ daemon is not running.
 Changelog
 ===========
 
+Daemonize is maintained under the [Semantic Versioning]
+(https://github.com/niegowski/semver/blob/master/semver.md) 
+guidelines.
+
 ### 0.3.0 - Jan 29 2012
   - Daemon emits Events instead of console.log()
   - API change - events in place of callbacks
