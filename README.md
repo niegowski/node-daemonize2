@@ -30,9 +30,7 @@ var daemon = require("daemonize").setup({
 switch (process.argv[2]) {
     
     case "start": 
-        daemon.start().once("started", function() {
-            process.exit();
-        });
+        daemon.start();
         break;
     
     case "stop":
