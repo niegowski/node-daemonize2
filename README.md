@@ -150,6 +150,9 @@ Daemonize is maintained under the [Semantic Versioning]
 (https://github.com/niegowski/semver/blob/master/semver.md) 
 guidelines.
 
+### 0.4.0-rc.2 - Jul 29 2012
+  - Passing command line arguments to child process
+
 ### 0.4.0-rc.1 - Jul 29 2012
   - Daemonize forked as Daemonize2 for Node 0.8.x compatibility
   - Removed native module for setsid - using child_process.spawn detached
