@@ -1,18 +1,15 @@
 {
-    "name": "daemonize",
-    "version": "0.3.1",
-    "description": "Module for easy creation of daemons",
+    "name": "daemonize2",
+    "version": "0.4.0-rc.1",
+    "description": "Module for easy creation of daemons for Node 0.8.x",
     "author": "Kuba Niegowski",
     "contributors": [],
-    "homepage": "https://github.com/niegowski/node-daemonize/",
+    "homepage": "https://github.com/niegowski/node-daemonize2/",
     "keywords" : [
         "daemon"
     ],
     "engines": {
-        "node": ">= 0.6.0"
+        "node": "0.8.x"
     },
-    "main": "./lib/daemonize.js",
-    "scripts": {
-        "preinstall": "node-waf configure build"
-    }
+    "main": "./lib/daemonize.js"
 }

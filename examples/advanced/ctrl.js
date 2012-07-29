@@ -1,5 +1,5 @@
 
-var daemon = require("daemonize").setup({
+var daemon = require("daemonize2").setup({
     main: "app.js",
     name: "sampleapp",
     pidfile: "/var/run/sampleapp.pid",
@@ -40,9 +40,7 @@ daemon
 switch (process.argv[2]) {
     
     case "start":
-        daemon.start().once("started", function() {
-            process.exit();
-        });
+        daemon.start();
         break;
     
     case "stop":
@@ -56,14 +54,10 @@ switch (process.argv[2]) {
     case "restart":
         if (daemon.status()) {
             daemon.stop().once("stopped", function() {
-                daemon.start().once("started", function() {
-                    process.exit();
-                });
+                daemon.start();
             });
         } else {
-            daemon.start().once("started", function() {
-                process.exit();
-            });
+            daemon.start();
         }
         break;
 
