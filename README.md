@@ -21,7 +21,7 @@ Example
 =========
 
 ``` js
-var daemon = require("daemonize").setup({
+var daemon = require("daemonize2").setup({
     main: "app.js",
     name: "sampleapp",
     pidfile: "sampleapp.pid"
