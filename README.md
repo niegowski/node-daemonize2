@@ -155,6 +155,9 @@ Daemonize is maintained under the [Semantic Versioning]
 (https://github.com/niegowski/semver/blob/master/semver.md)
 guidelines.
 
+### 0.4.0-rc.3 - Aug 14 2012
+  - Optional callback argument for start, stop and kill
+
 ### 0.4.0-rc.2 - Jul 29 2012
   - Passing command line arguments to child process
 
