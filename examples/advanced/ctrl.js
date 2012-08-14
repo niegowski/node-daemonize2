@@ -38,27 +38,23 @@ daemon
 
 
 switch (process.argv[2]) {
-    
+
     case "start":
         daemon.start();
         break;
-    
+
     case "stop":
         daemon.stop();
         break;
-    
+
     case "kill":
         daemon.kill();
         break;
-    
+
     case "restart":
-        if (daemon.status()) {
-            daemon.stop().once("stopped", function() {
-                daemon.start();
-            });
-        } else {
+        daemon.stop(function() {
             daemon.start();
-        }
+        });
         break;
 
     case "reload":
@@ -73,7 +69,7 @@ switch (process.argv[2]) {
         else
             console.log("Daemon is not running.");
         break;
-    
+
     default:
         console.log("Usage: [start|stop|kill|restart|reload|status]");
 }
