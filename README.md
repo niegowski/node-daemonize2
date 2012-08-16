@@ -118,7 +118,8 @@ Start daemon asynchronously. Emits `running` in case when daemon is
 already running and `starting` when daemon is not running. Then emits
 `started` when daemon is successfully started.
 
-Optional `listener` callback is once called on `running` or `started` event.
+Optional `listener` callback is once called on `running`, `started` or `error`
+event. The callback gets two arguments `(err, pid)`.
 
 Emits `error` in case of any problem during daemon startup.
 
@@ -129,7 +130,8 @@ set in options).
 Emits `notrunning` when daemon is not running, otherwise
 emits `stopping` and then `stopped` when daemon successfully stopped.
 
-Optional `listener` callback is once called on `notrunning` or `stopped` event.
+Optional `listener` callback is once called on `notrunning`, `stopped` or
+`error` event. The callback gets two arguments `(err, pid)`.
 
 ### daemon.kill([listener])
 Kill daemon asynchronously. Sends `SIGTERM` and after 2s `SIGKILL` to the
@@ -154,6 +156,9 @@ Changelog
 Daemonize is maintained under the [Semantic Versioning]
 (https://github.com/niegowski/semver/blob/master/semver.md)
 guidelines.
+
+### 0.4.0-rc.4 - Aug 16 2012
+  - The callback for start, stop and kill handles errors
 
 ### 0.4.0-rc.3 - Aug 14 2012
   - Optional callback argument for start, stop and kill
