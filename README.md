@@ -13,7 +13,7 @@ Just write your daemon as plain node.js application
 Installation
 ==============
 ```
-$ npm install daemonize
+$ npm install daemonize2
 ```
 
 
