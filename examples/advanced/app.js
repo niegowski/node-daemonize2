@@ -1,6 +1,7 @@
 
 var fs = require("fs"),
-    http = require("http"); 
+    http = require("http"),
+    cluster = require('cluster');
 
 
 var config = loadConfig(),
@@ -9,11 +10,11 @@ var config = loadConfig(),
 
 function loadConfig() {
     return JSON.parse(fs.readFileSync(__dirname + "/config.json"));
-} 
+}
 
 function openLog(logfile) {
-    return fs.createWriteStream(logfile, { 
-        flags: "a", encoding: "utf8", mode: 0644 
+    return fs.createWriteStream(logfile, {
+        flags: "a", encoding: "utf8", mode: 0644
     });
 }
 
@@ -22,8 +23,23 @@ function log(msg) {
 }
 
 
-
 log("Starting...");
+
+
+if (cluster.isMaster) {
+    log("Forking workers")
+
+    var cpus = require('os').cpus().length;
+    for (var i = 0; i < cpus; i++) {
+        cluster.fork();
+    }
+    return;
+}
+
+log("Initiating worker")
+
+
+
 
 var server = http.createServer(function(req, res) {
     log("Request from " + req.connection.remoteAddress);
@@ -55,10 +71,10 @@ process.once("SIGTERM", function() {
 
     server.on("close", function() {
         log("Stopped.");
-        
+
         logStream.on("close", function() {
             process.exit(0);
         }).end();
-        
+
     }).close();
 });
