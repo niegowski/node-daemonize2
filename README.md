@@ -157,6 +157,10 @@ Daemonize is maintained under the [Semantic Versioning]
 (https://github.com/niegowski/semver/blob/master/semver.md)
 guidelines.
 
+### 0.4.0-rc.6 - Nov 28 2012
+  - args option to enable node arguments ie --debug
+  - fix for: Wrapper seems to eat one argument
+
 ### 0.4.0-rc.5 - Aug 28 2012
   - Wrapper is transparent now
 
