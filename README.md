@@ -68,6 +68,7 @@ Creates new `Daemon` instance. Supported `options`:
 * `group` - name or id of group (default: current)
 * `silent` - disable printing info to console (default: `false`)
 * `stopTimeout` - interval of daemon killing retry (default: `2s`)
+* `args` - additional node runtime arguments, ie `--debug`
 
 All paths are resolved relative to file that uses "daemonize".
 
