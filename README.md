@@ -69,10 +69,11 @@ Creates new `Daemon` instance. Supported `options`:
 * `silent` - disable printing info to console (default: `false`)
 * `stopTimeout` - interval of daemon killing retry (default: `2s`)
 * `args` - additional node runtime arguments, ie `--debug`
+* `argv` - additional module arguments
 
 All paths are resolved relative to file that uses "daemonize".
 
-All commandline arguments will be passed to the child process.
+All commandline arguments will be passed to the child process unless `argv` option is provided.
 
 ## Daemon
 Daemon control class. It references controlled daemon.
