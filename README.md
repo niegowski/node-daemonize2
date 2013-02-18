@@ -73,7 +73,8 @@ Creates new `Daemon` instance. Supported `options`:
 
 All paths are resolved relative to file that uses "daemonize".
 
-All commandline arguments will be passed to the child process.
+All commandline arguments will be passed to the child process unless
+overriden with `argv` option.
 
 ## Daemon
 Daemon control class. It references controlled daemon.
