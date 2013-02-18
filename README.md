@@ -69,6 +69,7 @@ Creates new `Daemon` instance. Supported `options`:
 * `silent` - disable printing info to console (default: `false`)
 * `stopTimeout` - interval of daemon killing retry (default: `2s`)
 * `args` - additional node runtime arguments, ie `--debug`
+* `argv` - argv for daemon (default: `process.argv.slice(2)`)
 
 All paths are resolved relative to file that uses "daemonize".
 
