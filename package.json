@@ -1,10 +1,10 @@
 {
-    "name": "daemonize2",
-    "version": "0.4.0-rc.7",
-    "description": "Module for easy creation of daemons for Node 0.8.x",
+    "name": "daemonize.redux",
+    "version": "0.0.1",
+    "description": "Slight revision on top of Kuba Niegowski's Daemonize 2, tested to be compatible with Node 0.10",
     "author": "Kuba Niegowski",
-    "contributors": [],
-    "homepage": "https://github.com/niegowski/node-daemonize2/",
+    "contributors": ["Gabriel Lipson","Kuba Niegowski"],
+    "homepage": "https://github.com/objectundefined/node-daemonize2",
     "keywords" : [
         "daemon"
     ],
