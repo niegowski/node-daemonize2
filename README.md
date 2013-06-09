@@ -161,6 +161,10 @@ Daemonize is maintained under the [Semantic Versioning]
 (https://github.com/niegowski/semver/blob/master/semver.md)
 guidelines.
 
+### 0.4.1 - Jun 09 2013
+  - split `args` and `argv` on whitespaces
+  - added `umask` option
+
 ### 0.4.0 - Jun 05 2013
   - added argv option
 
