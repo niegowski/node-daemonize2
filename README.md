@@ -61,15 +61,15 @@ redirect output to some log file.
 ## daemonize.setup(options)
 Creates new `Daemon` instance. Supported `options`:
 
-* `main` - main application module file to run as daemon (required)
-* `name` - daemon name (default: basename of main)
-* `pidfile` - pidfile path (default: `/var/run/[name].pid`)
-* `user` - name or id of user (default: current)
-* `group` - name or id of group (default: current)
-* `silent` - disable printing info to console (default: `false`)
-* `stopTimeout` - interval of daemon killing retry (default: `2s`)
-* `args` - additional node runtime arguments, ie `--debug`
-* `argv` - argv for daemon (default: `process.argv.slice(2)`)
+* `main` - main application module file to run as daemon (required); `string`
+* `name` - daemon name (default: basename of main); `string`
+* `pidfile` - pidfile path (default: `/var/run/[name].pid`); `string`
+* `user` - name or id of user (default: current); `string`
+* `group` - name or id of group (default: current); `string`
+* `silent` - disable printing info to console (default: `false`); `boolean`
+* `stopTimeout` - interval (ms) of daemon killing retry (default: `2s`); `number`
+* `args` - additional node runtime arguments, ie `--debug`; `array` | `string`
+* `argv` - argv for daemon (default: `process.argv.slice(2)`); `array` | `string`
 
 All paths are resolved relative to file that uses "daemonize".
 
