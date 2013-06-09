@@ -1,7 +1,7 @@
 About
 =======
 
-Node module for easy creation of daemons for Node 0.8.x and above
+Node module for easy creation of daemons for Node 0.8.x and above.
 
 For Node 0.6.x compatibility see daemonize https://github.com/niegowski/node-daemonize
 
