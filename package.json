@@ -9,7 +9,7 @@
         "daemon"
     ],
     "engines": {
-        "node": "0.8.x"
+        "node": ">0.8.x"
     },
     "main": "./lib/daemonize.js"
 }
