@@ -1,7 +1,7 @@
 About
 =======
 
-Node module for easy creation of daemons for Node 0.8.x
+Node module for easy creation of daemons for Node 0.8.x and above
 
 For Node 0.6.x compatibility see daemonize https://github.com/niegowski/node-daemonize
 
@@ -160,6 +160,9 @@ Changelog
 Daemonize is maintained under the [Semantic Versioning]
 (https://github.com/niegowski/semver/blob/master/semver.md)
 guidelines.
+
+### 0.4.2 - Jun 09 2013
+  - update node version dependency
 
 ### 0.4.1 - Jun 09 2013
   - split `args` and `argv` on whitespaces
