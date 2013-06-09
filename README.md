@@ -66,11 +66,11 @@ Creates new `Daemon` instance. Supported `options`:
 * `pidfile` - pidfile path (default: `/var/run/[name].pid`); `string`
 * `user` - name or id of user (default: current); `string`
 * `group` - name or id of group (default: current); `string`
-* `umask` - file mode mask (default: 0); `number` | `string`
+* `umask` - file mode mask (default: 0); `number` or `string`
 * `silent` - disable printing info to console (default: `false`); `boolean`
 * `stopTimeout` - interval (ms) of daemon killing retry (default: `2s`); `number`
-* `args` - additional node runtime arguments, ie `--debug`; `array` | `string`
-* `argv` - argv for daemon (default: `process.argv.slice(2)`); `array` | `string`
+* `args` - additional node runtime arguments, ie `--debug`; `array` or `string`
+* `argv` - argv for daemon (default: `process.argv.slice(2)`); `array` or `string`
 
 All paths are resolved relative to file that uses "daemonize".
 
