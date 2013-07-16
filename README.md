@@ -71,6 +71,7 @@ Creates new `Daemon` instance. Supported `options`:
 * `stopTimeout` - interval (ms) of daemon killing retry (default: `2s`); `number`
 * `args` - additional node runtime arguments, ie `--debug`; `array` or `string`
 * `argv` - argv for daemon (default: `process.argv.slice(2)`); `array` or `string`
+* `cwd` - current working directory for spawned daemon (default: `/`); `string`
 
 All paths are resolved relative to file that uses "daemonize".
 
