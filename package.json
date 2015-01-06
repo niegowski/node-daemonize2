@@ -11,5 +11,9 @@
     "engines": {
         "node": ">0.8.x"
     },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/niegowski/node-daemonize2.git"
+    },
     "main": "./lib/daemonize.js"
 }
