@@ -72,6 +72,7 @@ Creates new `Daemon` instance. Supported `options`:
 * `args` - additional node runtime arguments, ie `--debug`; `array` or `string`
 * `argv` - argv for daemon (default: `process.argv.slice(2)`); `array` or `string`
 * `cwd` - current working directory for spawned daemon (default: `/`); `string`
+* `fds` - array of additional file descriptors to pass to the daemon. Note that the actual descriptors passed to the daemon are `[ 'ignore', 'ignore', 'ignore', 'ipc' ].concat(fds)`, so the supplied descriptors will be available in the daemon as starting from fd 4. For more information look at [Node docs](https://nodejs.org/api/child_process.html#child_process_options_stdio).
 
 All paths are resolved relative to file that uses "daemonize".
 
