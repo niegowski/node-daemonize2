@@ -1,0 +1,9 @@
+{
+  "name": "redirect",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "daemonize2": "file:../.."
+  },
+  "license": "MIT"
+}

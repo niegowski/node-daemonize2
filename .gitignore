@@ -1,2 +1,5 @@
 node_modules
 .project
+
+examples/*/node_modules
+examples/*/*.log
